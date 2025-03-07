@@ -1,0 +1,4 @@
+Sept 08, 2024 3:29:56 PM it.polito.g21.crm.utils.LoggerConfig setupLogger
+INFO: Logger configurato per scrivere su logs/crm.log
+set 08, 2024 8:38:10 PM it.polito.g21.crm.utils.LoggerConfig setupLogger
+INFO: Logger configurato per scrivere su logs\crm.log

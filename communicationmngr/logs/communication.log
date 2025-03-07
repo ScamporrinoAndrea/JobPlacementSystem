@@ -1,0 +1,2 @@
+set 08, 2024 4:07:04 PM com.example.communicationmngr.LoggerConfig setupLogger
+INFO: Logger configurato per scrivere su logs\communication.log

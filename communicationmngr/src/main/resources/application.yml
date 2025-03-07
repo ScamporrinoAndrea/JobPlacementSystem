@@ -1,0 +1,56 @@
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9090/realms/crm
+  mvc:
+    problemdetails:
+      enabled: true
+  kafka:
+    consumer:
+      bootstrap-servers: 127.0.0.1:9092
+      group-id: consumer
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      bootstrap-servers: 127.0.0.1:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      client-id: producer
+
+gmail-account:
+  application_name: Group21WebApp
+
+gmail:
+  client-id: 604409456667-9ppli5r26qqvgrh0dp5dijosk76v19ot.apps.googleusercontent.com
+  client-secret: client-secret
+  refresh-token: 1//044M-fZAIVJ8HCgYIARAAGAQSNgF-L9IrZc6ZWSNQYTLk5RpY3M6F2mXP0aDvVPaxC18Q4QI-cECz1lCtrOvyfPR6Jl_903pYdQ
+  application_name: Group21WebApp
+
+camel:
+  component:
+    google-mail-stream:
+      application-name: ${gmail.application_name}
+      client-id: ${gmail.client-id}
+      client-secret: ${gmail.client-secret}
+      refresh-token: ${gmail.refresh-token}
+    google-mail:
+      application-name: ${gmail.application_name}
+      client-id: ${gmail.client-id}
+      client-secret: ${gmail.client-secret}
+      refresh-token: ${gmail.refresh-token}
+
+server:
+  port: 8083
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["prometheus"]

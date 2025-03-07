@@ -1,0 +1,11 @@
+services:
+  keyclock:
+    image: keycloak/keycloak
+    ports:
+      - '9090:8080'
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: keycloakPassword
+    volumes:
+      - ./imports/crm-realm/:/opt/keycloak/data/import/
+    command: start-dev --import-realm

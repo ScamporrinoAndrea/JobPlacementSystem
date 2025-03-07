@@ -1,0 +1,4 @@
+set 08, 2024 4:07:18 PM com.example.doc_store.LoggerConfig setupLogger
+INFO: Logger configurato per scrivere su logs\docStore.log
+set 08, 2024 8:38:13 PM com.example.doc_store.LoggerConfig setupLogger
+INFO: Logger configurato per scrivere su logs\docStore.log

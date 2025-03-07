@@ -1,0 +1,73 @@
+{
+  "realm" : "crm",
+  "users" : [ {
+    "id" : "56da1ad9-b8ef-4aa2-a493-a6e41ecc0ca6",
+    "username" : "edomorello",
+    "firstName" : "Edoardo",
+    "lastName" : "Morello",
+    "email" : "edoardo.morello.12@gmail.com",
+    "emailVerified" : false,
+    "createdTimestamp" : 1717691116832,
+    "enabled" : true,
+    "totp" : false,
+    "credentials" : [ {
+      "id" : "b8c07561-dcaf-420b-85a0-ddb1cfffd4fa",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1717691128800,
+      "secretData" : "{\"value\":\"RaBjmx9Lp5KOva1eBV8lhFi1QzINYvyLhGUy+AD9IeCG+7W/AZz/bvXp7gwrgExDU6DXpd7XEvoDDOLFMlzntA==\",\"salt\":\"6KzvhIur8i4E9GfIDM42TQ==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":210000,\"algorithm\":\"pbkdf2-sha512\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "manager", "default-roles-crm" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "1464c351-33c4-47f2-9802-4050d5c2886f",
+    "username" : "fabmangani",
+    "firstName" : "Fabio",
+    "lastName" : "Mangani",
+    "email" : "s313373@studenti.polito.it",
+    "emailVerified" : false,
+    "createdTimestamp" : 1717692057504,
+    "enabled" : true,
+    "totp" : false,
+    "credentials" : [ {
+      "id" : "3bc43619-bccf-45af-8a4d-d8ca0e3cc64c",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1717692068286,
+      "secretData" : "{\"value\":\"PEMUscoiaSFLnkdWRdLjs3m1h9r13/V6gPRKzha/5jSdZ/g/+NH+SqdQJzWKGoNA0LGdnIp8FTPcSGO+rrZUmg==\",\"salt\":\"3rE5VbcFEqnDgleK/IuJQg==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":210000,\"algorithm\":\"pbkdf2-sha512\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-crm", "operator" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "9275b54d-e492-436a-bb0c-a01d18dd47d1",
+    "username" : "gabrimedica",
+    "firstName" : "Gabriele",
+    "lastName" : "Medica",
+    "email" : "s317657@studenti.polito.it",
+    "emailVerified" : false,
+    "createdTimestamp" : 1717692013192,
+    "enabled" : true,
+    "totp" : false,
+    "credentials" : [ {
+      "id" : "cc099d9d-c9ce-4e68-a6c1-d795dbfb7f98",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1717692024477,
+      "secretData" : "{\"value\":\"UuJtu8qSNGCFJ6aTPrRaRUMW61C3Yb7Ar7HAAT7GtPDWjcKJFm5LWvbQ+mXTbl98gGK7hWftAjPYaIVNY+vouA==\",\"salt\":\"CP8LjBroASbfnknVzTEL1w==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":210000,\"algorithm\":\"pbkdf2-sha512\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-crm", "guest" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  } ]
+}

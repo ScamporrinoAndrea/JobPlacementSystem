@@ -1,0 +1,64 @@
+spring:
+  application:
+    name: crm
+  cloud:
+    gateway:
+      mvc:
+        http-client:
+          type: autodetect
+        routes:
+          - id: crm
+            uri: http://localhost:8081
+            predicates:
+              - Path=/crm/**
+            filters:
+              - StripPrefix=1
+              - TokenRelay
+          - id: docStore
+            uri: http://localhost:8082
+            predicates:
+              - Path=/docStore/**
+            filters:
+              - StripPrefix=1
+              - TokenRelay
+          - id: communication
+            uri: http://localhost:8083
+            predicates:
+              - Path=/communication/**
+            filters:
+              - StripPrefix=1
+              - TokenRelay
+          - id: communication
+            uri: http://localhost:8085
+            predicates:
+              - Path=/analytics/**
+            filters:
+              - StripPrefix=1
+              - TokenRelay
+          - id: ui
+            uri: http://localhost:5173
+            predicates:
+              - Path=/ui/**
+          - id: home
+            uri: http://localhost:8080
+            predicates:
+              - Path=/
+            filters:
+              - RedirectTo=301,http://localhost:8080/ui
+
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:9090/realms/crm
+        registration:
+          kc1client:
+            provider: keycloak
+            client-id: crmclient
+            client-secret: qBOC9n1NMWhJ4uuyjSY7NFat1FguBj3X
+            scope:
+              - openid
+              - offline_access
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8080/login/oauth2/code/crmclient
